@@ -1,0 +1,8 @@
+.active:focus {
+    text-decoration: underline;
+    text-decoration-color: blue;
+        /* underline color */
+    text-decoration-thickness: 2px;
+        /* underline thickness */
+    text-underline-offset: 4px;
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Rubina Yasmin",
+    "exp": "5+",
+    "degree": "MBBS, FCPS (Medicine)",
+    "designation": "Consultant - Medicine",
+    "available_days": ["Sunday", "Tuesday", "Thursday"],
+    "reg_no": "A-52763",
+    "fee": 800,
+    "hospital_name": "Square Hospital, Dhaka",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/026/375/249/small_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Md. Asif Rahman",
+    "exp": "7+",
+    "degree": "MBBS, MD (Cardiology)",
+    "designation": "Associate Professor - Cardiology",
+    "available_days": ["Monday", "Wednesday", "Friday"],
+    "reg_no": "B-21456",
+    "fee": 1000,
+    "hospital_name": "Evercare Hospital, Dhaka",
+    "image": "https://i.pravatar.cc/400?img=12"
+  },
+  {
+    "id": 3,
+    "name": "Prof. Dr. Rowshan Ara",
+    "exp": "3+",
+    "degree": "MBBS, FCPS (Gynecology), MS",
+    "designation": "Professor - Gynecology & Obstetrics",
+    "available_days": ["Saturday", "Monday", "Wednesday"],
+    "reg_no": "C-34218",
+    "fee": 1200,
+    "hospital_name": "Popular Diagnostic Centre, Dhanmondi",
+    "image": "https://i.pravatar.cc/400?img=47"
+  },
+  {
+    "id": 4,
+    "name": "Dr. Tanvir Hossain",
+    "exp": "2+",
+    "degree": "MBBS, FCPS (Orthopedic Surgery)",
+    "designation": "Consultant - Orthopedics",
+    "available_days": ["Sunday", "Tuesday", "Thursday"],
+    "reg_no": "D-48123",
+    "fee": 900,
+    "hospital_name": "United Hospital, Dhaka",
+    "image": "https://i.pravatar.cc/400?img=20"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Naila Anjum",
+    "exp": "2+",
+    "degree": "MBBS, DDV (Dermatology)",
+    "designation": "Consultant - Skin & Venereology",
+    "available_days": ["Monday", "Wednesday", "Friday"],
+    "reg_no": "E-65327",
+    "fee": 700,
+    "hospital_name": "Labaid Specialized Hospital, Dhanmondi",
+    "image": "https://i.pravatar.cc/400?img=56"
+  },
+  {
+    "id": 6,
+    "name": "Prof. Dr. Md. Rahman",
+    "exp": "5+",
+    "degree": "MBBS, MD (Neurology)",
+    "designation": "Senior Consultant - Neurology",
+    "available_days": ["Sunday", "Tuesday", "Thursday"],
+    "reg_no": "F-21987",
+    "fee": 1200,
+    "hospital_name": "Ibn Sina Hospital, Dhanmondi",
+    "image": "https://i.pravatar.cc/400?img=10"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Nusrat Jahan",
+    "degree": "BDS, FCPS (Dental Surgery)",
+    "exp": "4+",
+    "designation": "Consultant - Dental & Oral Surgery",
+    "available_days": ["Saturday", "Monday", "Wednesday"],
+    "reg_no": "G-47320",
+    "fee": 600,
+    "hospital_name": "Dhaka Dental College Hospital",
+    "image": "https://i.pravatar.cc/400?img=38"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Md. Alam",
+    "exp": "3+",
+    "degree": "MBBS, DCH (Pediatrics)",
+    "designation": "Consultant - Child Specialist",
+    "available_days": ["Sunday", "Tuesday", "Thursday"],
+    "reg_no": "H-59104",
+    "fee": 750,
+    "hospital_name": "Impulse Hospital, Dhaka",
+    "image": "https://t4.ftcdn.net/jpg/03/10/37/43/360_F_310374365_fiIJLNqEeYVbXO0PpyUauQvZRreCMEdr.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Farzana Rahman",
+    "exp": "3+",
+    "degree": "MBBS, FCPS (Psychiatry)",
+    "designation": "Consultant - Mental Health",
+    "available_days": ["Monday", "Wednesday", "Friday"],
+    "reg_no": "I-32067",
+    "fee": 850,
+    "hospital_name": "Bangladesh Specialized Hospital",
+    "image": "https://img.freepik.com/free-photo/beautiful-young-female-doctor-looking-camera-office_1301-7807.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Prof. Dr. Md. Zafar",
+    "exp": "5+",
+    "degree": "MBBS, MS (ENT)",
+    "designation": "Professor - ENT & Head-Neck Surgery",
+    "available_days": ["Saturday", "Monday", "Wednesday"],
+    "reg_no": "J-14982",
+    "fee": 1000,
+    "hospital_name": "National ENT Institute, Tejgaon",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlb3PgA0xKykBHxEPCMI2hZpk_55hmjx-H7pifRqQlaw&s"
+  }
+]
