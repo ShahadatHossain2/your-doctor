@@ -7,7 +7,7 @@ import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 const Footer = () => {
   return (
     <div className="mt-10 bg-white p-10">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center gap-2">
         <img src={logo} alt="" />
         <h3 className="text-3xl font-bold">Your Doctor</h3>
       </div>

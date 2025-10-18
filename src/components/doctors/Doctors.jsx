@@ -1,24 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Doctors = ({ doctor }) => {
-  const {
-    name,
-    degree,
-    designation,
-    available_days,
-    fee,
-    hospital_name,
-    image,
-    reg_no,
-    exp,
-  } = doctor;
+  const { name, degree, available_days, image, reg_no, exp, id } = doctor;
 
   const today = new Date();
   const dayName = today.toLocaleDateString("en-US", { weekday: "long" });
 
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/doctorDetails/${id}`);
+  };
+
   return (
     <div>
-      <div className="w-full mx-auto card bg-base-100 shadow-sm my-2 p-8">
+      <div className="w-full h-full mx-auto card bg-base-100 shadow-sm my-2 p-8">
         <figure>
           <img src={image} alt="Doctor" className="rounded-xl h-60 w-80" />
         </figure>
@@ -36,14 +32,17 @@ const Doctors = ({ doctor }) => {
             {exp} Years Experience
           </p>
         </div>
-        <div>
+        <div className="w-full h-35">
           <h3 className="font-bold text-2xl my-2">{name}</h3>
           <p className="text-gray-500">{degree}</p>
           <hr className="border-t-2 border-gray-400 border-dotted my-2" />
           <p className="text-gray-500">® {reg_no}</p>
         </div>
         <div>
-          <button className="btn rounded-3xl w-full border-blue-500 text-blue-600 mt-2">
+          <button
+            onClick={handleNavigate}
+            className="btn rounded-3xl w-full border-blue-500 text-blue-600 mt-2"
+          >
             View Details
           </button>
         </div>

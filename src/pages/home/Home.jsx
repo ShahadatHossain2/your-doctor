@@ -31,7 +31,7 @@ const Home = () => {
           </p>
         </div>
         <div className="lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 gap-2">
-          {doctorsData.slice(0, showData).map((doctor) => (
+          {doctorsData.slice(0, showData)?.map((doctor) => (
             <Doctors key={doctor.id} doctor={doctor}></Doctors>
           ))}
         </div>
