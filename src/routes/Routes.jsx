@@ -4,6 +4,7 @@ import ErrorPage from "../pages/errorPage/ErrorPage";
 import Home from "../pages/home/Home";
 import DoctorDetails from "../pages/doctorDetails/doctorDetails";
 import { Suspense } from "react";
+import Appointments from "../pages/appointments/Appointments";
 
 const doctorsPromise = fetch("doctorsData.json").then((res) => res.json());
 
@@ -28,6 +29,15 @@ export const router = createBrowserRouter([
             <DoctorDetails doctorsPromise={doctorsPromise}></DoctorDetails>
           </Suspense>
         ),
+      },
+      {
+        path: "/appointments",
+        loader: async () => {
+          const res = await fetch("/doctorsData.json");
+          const data = await res.json();
+          return data;
+        },
+        Component: Appointments,
       },
     ],
   },

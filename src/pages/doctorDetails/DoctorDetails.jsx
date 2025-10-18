@@ -1,8 +1,12 @@
 import { CircleAlert } from "lucide-react";
 import React, { use } from "react";
 import { useParams } from "react-router";
+import { saveToDb } from "../../utilities/SaveToDB";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const DoctorDetails = ({ doctorsPromise }) => {
+  const MySwal = withReactContent(Swal);
   const doctors = use(doctorsPromise);
   const doctorId = parseInt(useParams().id);
   const doctor = doctors.find((dr) => dr.id === doctorId);
@@ -15,12 +19,22 @@ const DoctorDetails = ({ doctorsPromise }) => {
     hospital_name,
     image,
     reg_no,
-    exp,
     id,
   } = doctor;
 
   const today = new Date();
   const dayName = today.toLocaleDateString("en-US", { weekday: "long" });
+
+  const handleBookAppointment = (doctorId) => {
+    saveToDb(doctorId, "appointment");
+    MySwal.fire({
+      position: "center",
+      icon: "success",
+      title: "Your work has been saved",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   return (
     <div className="w-14/16 mx-auto">
@@ -89,7 +103,10 @@ const DoctorDetails = ({ doctorsPromise }) => {
             for today only. We appreciate your understanding and cooperation.
           </p>
           <div className="my-4 w-11/12 mx-auto">
-            <button className="btn btn-info text-white rounded-2xl w-full">
+            <button
+              onClick={() => handleBookAppointment(id)}
+              className="btn btn-info text-white rounded-2xl w-full"
+            >
               Book Appointment Now
             </button>
           </div>
