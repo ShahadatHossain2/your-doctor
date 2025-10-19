@@ -11,41 +11,52 @@ const Services = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <div
-      ref={ref}
-      className="grid lg:grid-cols-4 md:grid-cols-2 w-11/12 mx-auto place-items-center gap-6"
-    >
-      <div className="shadow-sm bg-white flex flex-col justify-center p-10 rounded-2xl w-4/5">
-        <img className="w-16" src={totalDocIcon} alt="" />
-        {/* <h3 className="text-6xl font-bold">199+</h3> */}
-        <h3 className="text-6xl font-bold">
-          {inView ? <CountUp end={199} duration={2} /> : 0}+
+    <div>
+      <div className="text-center">
+        <h3 className="font-bold text-[40px]">
+          We Provide Best Medical Services
         </h3>
-        <p>Total Doctors</p>
+        <p className="text-[16px] text-gray-500">
+          Our platform connects you with verified, experienced doctors across
+          various specialties — all at your convenience.
+        </p>
       </div>
-      <div className="w-4/5 shadow-sm bg-white  flex flex-col justify-center p-10 rounded-2xl">
-        <img className="w-16" src={reviewsIcon} alt="" />
-        {/* <h3 className="text-6xl font-bold">467+</h3> */}
-        <h3 className="text-6xl font-bold">
-          {inView ? <CountUp end={467} duration={2} /> : 0}+
-        </h3>
-        <p>Total Reviews</p>
-      </div>
-      <div className="w-4/5 shadow-sm bg-white  flex flex-col justify-center p-10 rounded-2xl">
-        <img className="w-16" src={patientsIcon} alt="" />
-        {/* <h3 className="text-6xl font-bold">1900+</h3> */}
-        <h3 className="text-6xl font-bold">
-          {inView ? <CountUp end={1900} duration={2} /> : 0}+
-        </h3>
-        <p>Patients</p>
-      </div>
-      <div className="w-4/5 shadow-sm bg-white  flex flex-col justify-center items p-10 rounded-2xl">
-        <img className="w-16" src={stuffsIcon} alt="" />
-        {/* <h3 className="text-6xl font-bold">300+</h3> */}
-        <h3 className="text-6xl font-bold">
-          {inView ? <CountUp end={300} duration={2} /> : 0}+
-        </h3>
-        <p>Total Stuffs</p>
+      <div
+        ref={ref}
+        className="grid lg:grid-cols-4 md:grid-cols-2 w-11/12 mx-auto gap-2"
+      >
+        <div className="mt-2 shadow-sm bg-white  flex flex-col justify-center p-8 rounded-2xl">
+          <img className="w-16" src={totalDocIcon} alt="" />
+          {/* <h3 className="text-6xl font-bold">199+</h3> */}
+          <h3 className="text-6xl font-bold">
+            {inView ? <CountUp end={199} duration={2} /> : 0}+
+          </h3>
+          <p>Total Doctors</p>
+        </div>
+        <div className="mt-2 shadow-sm bg-white  flex flex-col justify-center p-8 rounded-2xl">
+          <img className="w-16" src={reviewsIcon} alt="" />
+          {/* <h3 className="text-6xl font-bold">467+</h3> */}
+          <h3 className="text-6xl font-bold">
+            {inView ? <CountUp end={467} duration={2} /> : 0}+
+          </h3>
+          <p>Total Reviews</p>
+        </div>
+        <div className="mt-2 shadow-sm bg-white  flex flex-col justify-center p-8 rounded-2xl">
+          <img className="w-16" src={patientsIcon} alt="" />
+          {/* <h3 className="text-6xl font-bold">1900+</h3> */}
+          <h3 className="text-6xl font-bold">
+            {inView ? <CountUp end={1900} duration={2} /> : 0}+
+          </h3>
+          <p>Patients</p>
+        </div>
+        <div className=" mt-2 shadow-sm bg-white  flex flex-col justify-center items p-8 rounded-2xl">
+          <img className="w-16" src={stuffsIcon} alt="" />
+          {/* <h3 className="text-6xl font-bold">300+</h3> */}
+          <h3 className="text-6xl font-bold">
+            {inView ? <CountUp end={300} duration={2} /> : 0}+
+          </h3>
+          <p>Total Stuffs</p>
+        </div>
       </div>
     </div>
   );
