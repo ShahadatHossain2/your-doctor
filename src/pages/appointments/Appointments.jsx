@@ -3,8 +3,7 @@ import AppointmentList from "./AppointmentList";
 import { useLoaderData } from "react-router";
 import { deleteAppointment, getStoredDoctors } from "../../utilities/SaveToDB";
 import AppointmentChart from "./AppointmentChart";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+import { ToastContainer, toast } from "react-toastify";
 
 const Appointments = () => {
   const doctors = useLoaderData();
@@ -14,17 +13,15 @@ const Appointments = () => {
     setStoredDoctors(getStoredDoctors("appointment"));
   }, []);
 
-  const MySwal = withReactContent(Swal);
   const handleCancelAppointment = (id) => {
     deleteAppointment(id, "appointment");
-    MySwal.fire({
-      position: "center",
-      icon: "warning",
-      title: "Your Appointment Canceled!!",
-      showConfirmButton: false,
-      timer: 1500,
-    });
     setStoredDoctors((prev) => prev.filter((doctorId) => doctorId !== id));
+    toast.warning("Your Appointment Has Been Canceled!", {
+      position: "top-center",
+      autoClose: 2000,
+      theme: "colored",
+      style: { background: "red", color: "white" },
+    });
   };
   const appointedDoctors = doctors.filter((doctor) =>
     storedDoctors.includes(doctor.id)
@@ -53,6 +50,7 @@ const Appointments = () => {
           ></AppointmentList>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };

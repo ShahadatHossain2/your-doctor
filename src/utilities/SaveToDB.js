@@ -11,14 +11,10 @@ const getStoredDoctors = (key) => {
 
 const saveToDb = (id,key)=>{
     const prevStoredData = getStoredDoctors(key);
-    if(prevStoredData.includes(id)) {
-        alert('Already Booked!');
-    }
-    else{
+    
         prevStoredData.push(id);
         const newData = JSON.stringify(prevStoredData);
         localStorage.setItem(key,newData)
-    }
 }
 
 const deleteAppointment = (idx, key) => {

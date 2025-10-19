@@ -1,7 +1,7 @@
 import { CircleAlert } from "lucide-react";
 import React, { use } from "react";
 import { useParams } from "react-router";
-import { saveToDb } from "../../utilities/SaveToDB";
+import { getStoredDoctors, saveToDb } from "../../utilities/SaveToDB";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
@@ -26,14 +26,33 @@ const DoctorDetails = ({ doctorsPromise }) => {
   const dayName = today.toLocaleDateString("en-US", { weekday: "long" });
 
   const handleBookAppointment = (doctorId) => {
-    saveToDb(doctorId, "appointment");
-    MySwal.fire({
-      position: "center",
-      icon: "success",
-      title: "Your work has been saved",
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    const prevStoredData = getStoredDoctors("appointment");
+    if (available_days.includes(dayName) === false) {
+      MySwal.fire({
+        position: "center",
+        icon: "warning",
+        title: `${name} not Available today`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else if (prevStoredData.includes(id)) {
+      MySwal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Appointment Already booked!!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      saveToDb(doctorId, "appointment");
+      MySwal.fire({
+        position: "center",
+        icon: "success",
+        title: "Appointment succeed!!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
 
   return (
